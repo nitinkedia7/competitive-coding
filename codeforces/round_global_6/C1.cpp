@@ -1,0 +1,75 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const ll MOD = 1000000007;
+
+int gcd(int x, int y) {
+    if (y == 0) return x;
+    return gcd(y, x % y);
+}
+
+void sherlock(int r, int c) {
+    vector<vector<int>> v(r, vector<int> (c, 1));
+    if (c == 1) {
+        if (r == 1) {
+            cout << 1 << " " << 1 << endl;
+            return;
+        }
+        for (int i = 0; i < r; i++) {
+            v[i][0] = i + 2;
+        }
+        return;
+    }
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            v[i][j] = i + 1;
+        }
+    }
+    for (int j = 0; j < c; j++) {
+        for (int i = 0; i < r; i++) {
+            v[i][j] = (v[i][j] / gcd(v[i][j], r + j + 1)) * (r + j + 1); 
+        }
+    }
+    for (int i = 0; i < r; i++) {
+        int g = v[i][0];
+        for (int j = 1; j < c; j++) {
+            g = gcd(g, v[i][j]);
+        }
+        if (g != (i + 1)) {
+            cout << r << " " << c << endl;
+            // cout << 0 << endl;
+            return;
+        }
+    }
+    for (int j = 0; j < c; j++) {
+        int g = v[0][j];
+        for (int i = 0; i < r; i++) {
+            g = gcd(g, v[i][j]);
+        }
+        if (g != (r + j + 1)) {
+            cout << r << " " << c << endl;
+            // cout << 0 << endl;
+            return;
+        }
+    }
+    // for (int i = 0; i < r; i++) {
+    //     for (int j = 0; j < c; j++) {
+    //         cout << v[i][j] << " ";
+    //     }
+    //     cout << endl;
+    // }
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    // int tt;
+    // tt = 1;
+    // for (int t = 1; t <= tt; t++) sherlock(t);
+    for (int r = 1; r <= 500; r += 100) {
+        for (int c = 1; c <= 500; c++) {
+            sherlock(r, c);
+        }
+    }
+    return 0;
+}
