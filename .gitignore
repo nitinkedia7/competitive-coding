@@ -1,4 +1,6 @@
-../a.out
+a.out
+*.in
+test.txt
 .vscode/
 book.pdf
 stl/
