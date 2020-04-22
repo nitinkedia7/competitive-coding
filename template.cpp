@@ -4,7 +4,9 @@ typedef long long ll;
 const ll MOD = 1000000007;
 
 void sherlock(int t) {
-    
+
+
+    cout << "Case #" << t << ": " << endl;
 }
 
 int main() {
