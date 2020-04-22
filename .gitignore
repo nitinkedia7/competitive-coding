@@ -1,11 +1,16 @@
-a.out
+# C++ executables
+*.out
+
+# Test IO
 *.in
 test.txt
+
+# VSCode config
 .vscode/
-book.pdf
-stl/
-Pipfile
+
+# Folders
 codeagon/
-icpc.pdf
-PlacementTalk.pdf
-longest-subseq.cpp
+ref/
+
+# Python
+Pipfile
