@@ -1,0 +1,1 @@
+CXXFLAGS = -Wall -O2 -std=c++17

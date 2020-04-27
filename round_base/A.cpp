@@ -1,7 +1,7 @@
 #include "bits/stdc++.h"
 using namespace std;
-#define all(x) (x).begin(), (x).end()
 using ll = long long;
+#define all(x) (x).begin(), (x).end()
 const ll MOD = 1000000007;
 
 void sherlock(int t) {
