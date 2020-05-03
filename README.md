@@ -11,11 +11,13 @@ This repository serves as the go to backup of almost all my submissions on onlin
 # How to run
 Use `./a.out < test.in |& tee test.out`
 
-# Precompiled headers (Not working)
-1. Go to contest folder `cd round_500`
-2. Copy stdc++.h to contest folder `cp /usr/include/c++/9/bits/stdc++.h bits/`
+# Precompiled headers
+1. Go to contest folder `cd round_base`
+2. Copy stdc++.h to contest folder `cp /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h bits/`
 3. Go to bits/ `cd bits`
-4. Compile the header `g++ -std=c++17 stdc++.h `
+4. Compile the header `g++ -Wall -O2 -std=c++17 stdc++.h`
+
+Note that the header should be compiled with the same flags as the solution. 
 
 # Links
 1. [Codeforces: С++17 64bit Support](https://codeforces.com/blog/entry/75004)
