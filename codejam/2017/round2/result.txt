@@ -1,0 +1,8 @@
+52c52
+< Case #52: IMPOSSIBLE
+---
+> Case #52: POSSIBLE
+54c54
+< Case #54: POSSIBLE
+---
+> Case #54: IMPOSSIBLE
